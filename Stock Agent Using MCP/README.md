@@ -12,7 +12,7 @@ An AI-powered Streamlit application built using **LangChain + Groq LLM** that pr
 
 ## 🚀 Live Demo
 
-🔗 Streamlit App: https://your-app-name.streamlit.app
+🔗 Streamlit App: https://generative-ai-es3syvvaf49tn7tmraqkhv.streamlit.app
 
 ---
 
