@@ -1,7 +1,5 @@
 import streamlit as st
 import requests
-import os
-from dotenv import load_dotenv
 
 from langchain_groq import ChatGroq
 from langchain_core.tools import tool
@@ -9,9 +7,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # Load API keys
-load_dotenv()
-groq_key = os.getenv("GROQ_API_KEY")
-weather_key = os.getenv("OPENWEATHER_API_KEY")
+groq_key = st.secrets["GROQ_API_KEY"]
+weather_key = st.secrets["OPENWEATHER_API_KEY"]
 
 # Initialize LLM
 llm = ChatGroq(
@@ -90,4 +87,5 @@ Provide:
 
     response = llm.invoke(full_prompt)
     st.write(response.content)
+
 
